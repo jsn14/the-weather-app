@@ -106,7 +106,7 @@ function checkWeather(location) {
 
         // push changes to selected DOM elements
         city.textContent = currentWeather.city + ', ' + currentWeather.country;
-        icon.src = `http://openweathermap.org/img/wn/${currentWeather.icon}@2x.png`;
+        icon.src = `https://openweathermap.org/img/wn/${currentWeather.icon}@2x.png`;
         temp.innerHTML = Math.round(currentWeather.temperatue);
         conditions.textContent = currentWeather.conditions;
         humidity.textContent = currentWeather.humidity;
