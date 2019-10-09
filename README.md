@@ -15,7 +15,7 @@ This application has two modes. We need to provide the location name or coordina
 >Application must have access to location service of the device to use. 
 * Manual mode
 ```
-user can enter [ City ] name manully as well if location service is not available.
+user can enter [ City ] name manually as well if location service is not available.
 ```
 
 ## Future scope
