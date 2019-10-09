@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="It is simple vanillaJS app to provide current weather using REST api calls">
+    <meta name="keywords" content="current weather, portfolio app">
+    <meta name="author" content="jsnandha.ca">
+    <title>The Weather App</title>
+    <link rel="stylesheet" type="text/css" href="dist/css/styles.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>The Weather</h1>
+    </header>
+    <section>
+        <div class="container">
+            <div id="city-refresh-wrap" class="row">
+                <div id="city-selected"><img src="dist/img/location.svg" /><span id="city">City</span></div>
+                <div id="refresh-btn"><span>&#8635;</span> Refresh</div>
+            </div>
+            <div id="weather-widget" class="row">
+                <div id="weather-main">
+                    <div id="current-temp">
+                        <img id="icon" src="dist/img/weather.svg" alt="Icon not available">
+                        <span id="temp">00</span><span id="degree"> &#8451;</span>
+                    </div>
+                    <div id="current-condition">Current Conditions
+                    </div>
+                </div>
+                <div id="weather-details">
+                    <div>Humidity: <span id="humidity"> 00</span><span class="units">%</span> </div>
+                    <div>Visibility: <span id="visibility"> 00</span><span class="units"> km</span> </div>
+                    <div>Pressure: <span id="pressure"> 00</span><span class="units"> kPa</span></div>
+                </div>
+            </div>
+            <div id="status" class="row">
+                    <div>Mode: <span id="message">Status message</span></div>
+            </div><img id="mode_icon" src="dist/img/location-arrow.svg" alt=""/>
+            <div id="location" class="row">
+                <input required id="city-entered" type="text" placeholder="Enter city name">
+                <input id="submit" type="button" value="&rarr;">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p><span id="copyright-year"></span> &copy; made with &hearts; by jsnandha.ca</p>
+    </footer>
+    </main>
+    <script type="text/javascript" src="dist/js/polyfill.min.js"></script>
+    <script type="text/javascript" src="dist/js/script.min.js"></script>
+</body>
+
+</html>

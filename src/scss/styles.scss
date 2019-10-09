@@ -1,0 +1,213 @@
+@import 'base/variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap');
+
+
+html,
+body {
+    background: $bg;
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    min-height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    letter-spacing: 2px;
+    color: $wh;
+    text-shadow: 1px 1px $widget-icon;
+}
+
+section {
+    flex: 1;
+
+    .container {
+        background-color: rgba($color: #fff, $alpha: 0.25);
+        margin: 20px auto;
+        max-width: 500px;
+        padding: 20px 40px;
+        border-radius: 10px;
+        display: flexbox;
+        justify-items: center;
+        align-items: center;
+
+        .row {
+            margin: 10px 0;
+        }
+
+        #city-refresh-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            /* selected city styles */
+            #city-selected {
+                display: inline-flex;
+                background-color: $widget-bg;
+                padding: 6px 10px;
+                border-radius: 10px;
+                color: $wh;
+                font-size: 20px;
+                font-weight: 300;
+
+                img {
+                    width: 15px;
+                    height: auto;
+                    margin-right: 10px;
+                }
+            }
+
+            // refresh button
+            #refresh-btn{
+                padding: 5px 10px;
+                border-radius: 5px;
+                background-color: rgb(10, 210, 245);
+                color: $widget-bg;
+                font-weight: 400;
+                font-size: 12px;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+        }
+
+        /* weather styles */
+        #weather-widget {
+            background-color: $widget-bg;
+            border-radius: 10px;
+            padding: 10px;
+
+            /* hero data of weather widget */
+            #weather-main {
+                border-bottom: 1px solid $widget-icon;
+                color: $wh;
+                padding-bottom: 20px;
+
+                #current-temp {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 100;
+
+                    #temp {
+                        font-size: 30px;
+                    }
+
+                    #degree {
+                        font-size: 16px;
+                        font-weight: 100;
+                    }
+
+                    #icon {
+                        width: 80px;
+                    }
+                }
+
+                #current-condition {
+                    letter-spacing: 2px;
+                    font-size: 30px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    text-align: center;
+                }
+            }
+
+            /* other details about weather */
+            #weather-details {
+                text-align: center;
+                padding: 20px 10px;
+
+                div {
+                    display: inline;
+                    line-height: 25px;
+                    color: $widget-icon;
+                    margin: 10px 15px;
+                    font-weight: 300;
+
+                    span {
+                        color: $wh;
+                    }
+
+                    .units {
+                        font-size: 80%;
+                    }
+                }
+            }
+        }
+
+        /* Status message */
+        #status {
+            display: inline-flex;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: $widget-bg;
+            text-align: left;
+            background-color: $status-bg;
+
+            #message {
+                margin-left: 10px;
+                color: $msg;
+                font-size: 90%;
+                font-weight: 300;
+            }
+
+        }
+
+        #mode_icon {
+            margin: 0 5px;
+            width: 15px;
+            height: auto;
+        }
+
+        /* location indput styles */
+        #location {
+            margin: 0 auto;
+
+            div {
+                margin: 10px 0;
+            }
+
+            input[type='text'],
+            input[type='button'] {
+                background-color: $status-bg;
+                color: $msg;
+                padding: 6px 10px;
+                font-size: 20px;
+                font-weight: 100;
+                border-radius: 5px;
+                border: 0;
+                outline: 0;
+            }
+
+            ::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: $widget-bg;
+                // color: $wh;
+                font-weight: 100;
+            }
+
+            input[type='button'] {
+                background-color: $widget-icon;
+                color: $text;
+            }
+        }
+    }
+}
+#attribution{
+    font-size: 10px;
+    color: $widget-bg;
+    a{
+        color: $widget-bg;
+        text-decoration: none;
+    }
+    padding: 5px;
+}
+footer {
+    padding: 5px 0;
+    background: $ft;
+    text-align: center;
+    font-weight: 300;
+    color: $wh;
+}
