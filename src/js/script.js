@@ -6,7 +6,7 @@ import {
 
 // API URL parameters
 const api = 'https://api.openweathermap.org/data/2.5/weather?';
-const apiKey = '&APPID=301928bddd4ba25acb86c57cdcd71281';
+const apiKey = '&APPID=';
 const units = "metric"; // api parameter for units
 
 // select DOM element for status message
